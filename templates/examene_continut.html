@@ -1,0 +1,86 @@
+<div data-w-tab="Tab 1" class="w-tab-pane w--tab-active">
+    <div class="w-layout-vflex flex_teme">
+        {% for examen in examene %}
+        {% if examen.specializare.ciclu == "Licenta" %}
+        <div id="w-node-_5c59dc7f-9537-3702-c8c1-61fa39bbf1a2-60b40171"
+            class="w-layout-layout quick-stack wf-layout-layout">
+            <div id="w-node-_5c59dc7f-9537-3702-c8c1-61fa39bbf1a3-60b40171" class="w-layout-cell cell-2">
+                <div>
+                    <div class="text-block-40">{{examen.student}}</div>
+                </div>
+            </div>
+            <div id="w-node-_5c59dc7f-9537-3702-c8c1-61fa39bbf1a4-60b40171" class="w-layout-cell cell-3">
+                <div>
+                    <a href="#" class="link-13">{{examen.profesor.grad}} {{examen.profesor.nume}}
+                        {{examen.profesor.prenume}}</a>
+                </div>
+            </div>
+            <div id="w-node-da7e06aa-5319-670a-614f-36eeccc2b583-60b40171" class="w-layout-cell cell-4">
+                <div>
+                    <div>{{examen.denumire}}</div>
+                </div>
+            </div>
+            <div id="w-node-_50dc9af8-d2f9-a146-9ed8-646605192b8d-60b40171" class="w-layout-cell cell-5">
+                <div>
+                    <div>{{examen.specializare.acronim}}</div>
+                </div>
+            </div>
+            <div id="w-node-_03ea1a0d-baa4-9f34-f876-578c07ac4346-60b40171" class="w-layout-cell cell-6">
+                <div>
+                    <div>{{examen.text}}</div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<div data-w-tab="Tab 2" class="w-tab-pane">
+    <div class="w-layout-vflex flex_teme">
+        {% for examen in examene %}
+        {% if examen.specializare.ciclu == "Master" %}
+        <div id="w-node-_5c59dc7f-9537-3702-c8c1-61fa39bbf1a2-60b40171"
+            class="w-layout-layout quick-stack wf-layout-layout">
+            <div id="w-node-_5c59dc7f-9537-3702-c8c1-61fa39bbf1a3-60b40171" class="w-layout-cell cell-2">
+                <div>
+                    <div class="text-block-40">{{examen.student}}</div>
+                </div>
+            </div>
+            <div id="w-node-_5c59dc7f-9537-3702-c8c1-61fa39bbf1a4-60b40171" class="w-layout-cell cell-3">
+                <div>
+                    <a href="#" class="link-13">{{examen.profesor.grad}} {{examen.profesor.nume}}
+                        {{examen.profesor.prenume}}</a>
+                </div>
+            </div>
+            <div id="w-node-da7e06aa-5319-670a-614f-36eeccc2b583-60b40171" class="w-layout-cell cell-4">
+                <div>
+                    <div>{{examen.denumire}}</div>
+                </div>
+            </div>
+            <div id="w-node-_50dc9af8-d2f9-a146-9ed8-646605192b8d-60b40171" class="w-layout-cell cell-5">
+                <div>
+                    <div>{{examen.specializare.acronim}}</div>
+                </div>
+            </div>
+            <div id="w-node-_03ea1a0d-baa4-9f34-f876-578c07ac4346-60b40171" class="w-layout-cell cell-6">
+                <div>
+                    <div>{{examen.text}}</div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<div data-w-tab="Tab 3" class="w-tab-pane">
+    <div class="w-layout-vflex flex-block-4">
+        <h1 class="heading-13">Documente utile</h1>
+        <ul role="list" class="w-list-unstyled">
+            {% for document in documente %}
+            <li>
+                <a href="{{document.fisier.url}}" download class="link-14">{{document.denumire}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

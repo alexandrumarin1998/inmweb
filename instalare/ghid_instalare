@@ -1,0 +1,26 @@
+# instaleaza nginx( fisiere de configurare prezentate aici )
+# upg-ploiesti.conf este pentru nginx daca se doreste apache 2 se adapteaza la apache 2
+# configurarile sunt facute orientativ, ramane la alegerea celui care instaleaza ce si cum configureaza
+
+# necesar este python3.10, pip, python3.10-venv, php de la 5.5 in sus, uwsgi
+# si uwsgi plugin pentru python3
+# sudo apt install uwsgi-plugin-python3 
+# prerechizitile omise in acest fisier apar ca mesaje de eroare pe parcurs
+
+# pentru a instala requirements pip install -r requirements.txt
+# pentru a porni serverul de django dupa ce s-a instalat uwsgi
+# uwsgi --ini uwsgi.ini # aici recomand sa fie facut un daemon prin systemd sau initd
+# inainte de pornirea serverului cu uwsgi trebuie sa te asiguri ca ai un virtualenv facut si ca ai toate cele necase instalate.
+
+
+# sa fie adaugate spre servire ca in fisierul de configurare cele doua media si static. acestea trebuie servite de nginx sau apache
+# django nu are capacitatea asta
+# vezi fisierul de upg-ploiesti.conf pentru a creea serverul etc
+# pe partea de domenii subdomenii nu ma pricep ramane resp celui care instaleaza proiectul
+# evident trb sa asculte socket-ul facut pe 0.0.0.0:8000, se pot folosi si unix sockets, nu le-am dat de cap pentru ca trb tinut cont de user permisions.
+# daca ceva nu functioneaza prin acest proiect este dat de user permissions, asigurati-va ca sunt setate mereu corect
+
+# pentru tinyfilemanager acesta are path-urile de functionare codate in aplicatie, deci mergi la /var/www si lasa acolo tinyfilemanager.php
+# dupa asta creeaza un fisier tinyfilemanager_root caruia sa i dai drepturi depline 777, pentru a putea fi accesat de catre userul www-data care tine daemonul php-fpm
+# seteaza ruta din nginx/apache pe acest server pentru a duce la ceva gen /filemanager . nu este f important ideea principala este ca in django admin se va face redirectare catre aceasta ruta. Deci daca numele este altul atunci trb modificat din proiectul de django totodata se recomanda in settings.py din proiectu de django sa fie introduse allowed hosts.
+

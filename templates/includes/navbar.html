@@ -1,0 +1,185 @@
+{% load static %}
+
+      <!-- Acasa -->
+      {% url 'acasa' as home %}
+
+      <!-- Despre noi -->
+      {% url 'prezentare' as prezentare %}
+      {% url 'organizare' as organizare %}
+      {% url 'membri' as membri %}
+
+      <!-- Educatie -->
+      {% url 'specializari' as specializari %}
+      {% url 'examene' as examene %}
+      {% url 'burse' as burse %}
+
+      <!-- Cercetare -->
+
+      <!-- Contact -->
+      {% url 'contact' as contact %}
+
+<header id="nav" class="sticky-nav">
+    <div class="brand">
+      <div class="text-block-42">I N M</div>
+    </div>
+    <div class="container-2 w-container">
+      <a href="{{home}}" aria-current="page" class="link-dwn _2 w-inline-block w--current">
+        <div class="line-decor">
+          <div class="text-block-7">Acasă</div>
+        </div>
+      </a>
+      <div data-hover="true" data-delay="0" class="dropdown w-dropdown">
+        <div class="link-dwn w-dropdown-toggle">
+          <div class="line-decor">
+            <div class="icon w-icon-dropdown-toggle"></div>
+            <div class="text-block-6">Despre noi</div>
+          </div>
+        </div>
+        <nav class="dropdown-list w-dropdown-list">
+          <div class="lnk_down">
+            <div class="line-decor">
+              <a href="{{prezentare}}" class="dropdown-link w-dropdown-link">Prezentare generală</a>
+            </div>
+          </div>
+          <div class="lnk_down">
+            <div class="line-decor">
+              <a href="{{organizare}}" class="dropdown-link w-dropdown-link">Organigramă</a>
+            </div>
+          </div>
+          <div class="lnk_down">
+            <div class="line-decor">
+              <a href="{{membri}}" class="dropdown-link w-dropdown-link">Membri</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div data-hover="true" data-delay="0" class="dropdown w-dropdown">
+        <div class="link-dwn w-dropdown-toggle">
+          <div class="line-decor">
+            <div class="icon w-icon-dropdown-toggle"></div>
+            <div class="text-block-6">Educatie</div>
+          </div>
+        </div>
+        <nav class="dropdown-list w-dropdown-list">
+          <div class="lnk_down">
+            <div class="line-decor">
+              <a href="{{specializari}}" class="dropdown-link w-dropdown-link">Programe de studii</a>
+            </div>
+          </div>
+          <div class="lnk_down">
+            <div class="line-decor">
+              <a href="{{examene}}" class="dropdown-link w-dropdown-link">Examene</a>
+            </div>
+          </div>
+          <div class="lnk_down">
+            <div class="line-decor">
+              <a href="{{burse}}" class="dropdown-link w-dropdown-link">Cost &amp; Scholarship</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div data-hover="true" data-delay="0" class="dropdown w-dropdown">
+        <div class="link-dwn w-dropdown-toggle">
+          <div class="line-decor">
+            <div class="icon w-icon-dropdown-toggle"></div>
+            <div class="text-block-6">Cercetare</div>
+          </div>
+        </div>
+        <nav class="dropdown-list w-dropdown-list">
+          <div class="lnk_down">
+            <div class="line-decor">
+              <a href="#" class="dropdown-link w-dropdown-link">Centre de cercetare</a>
+            </div>
+          </div>
+          <div class="lnk_down">
+            <div class="line-decor">
+              <a href="#" class="dropdown-link w-dropdown-link">Teze de doctorat</a>
+            </div>
+          </div>
+          <div class="lnk_down">
+            <div class="line-decor">
+              <a href="#" class="dropdown-link w-dropdown-link">Programe postdoctorale</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <a href="{{contact}}" class="link-dwn _2 w-inline-block">
+        <div class="line-decor">
+          <div class="text-block-7">Contact</div>
+        </div>
+      </a>
+      <div class="linie-separare"></div>
+      <a href="https://www.facebook.com/UPGIME" target="_blank" class="social w-inline-block"><img src="{% static 'images/12.svg' %}" loading="lazy" width="26" alt=""></a>
+      <a href="https://www.instagram.com/ime_upg_ploiesti/?igshid=YmMyMTA2M2Y%3D" target="_blank" class="social w-inline-block"><img src="{% static 'images/13.svg' %}" loading="lazy" width="28" alt=""></a>
+    </div>
+</header>
+<div class="bg-flex">
+    <div class="nav-container">
+      <div class="logo_mobil">
+        <a href="{{home}}" aria-current="page" class="link-18 w--current">I N M</a>
+      </div>
+      <div class="dreapta">
+        <div data-w-id="e29ee3de-64d1-76da-e8ba-e9506ec5da68" class="hamburger-meniu"><img src="{% static 'images/menu-icon.svg' %}" loading="lazy" alt="icon-meniu"></div>
+      </div>
+    </div>
+</div>
+<div class="mobile_nav">
+    <div class="close_div">
+      <div class="text-block-47">Site menu</div>
+      <div data-w-id="ea94b391-b569-9a74-8fff-37a9dce9f723" class="close_mnu"><img src="{% static 'images/cross-icon.svg' %}" loading="lazy" width="14" alt=""></div>
+    </div>
+    <ul role="list" class="list-6 w-list-unstyled">
+      <li class="lista_item">
+        <a href="{{home}}" class="link_meniu_mobil">Acasă</a>
+      </li>
+      <li class="lista_item">
+        <div class="div-block-34">
+          <a href="#" class="link_meniu_mobil">Despre noi</a>
+          <div data-w-id="53d26438-8345-1f4e-db69-7c69b89a56cb" class="icon_down"><img src="{% static 'images/right-arrow-num-list.svg' %}" loading="lazy" width="10" alt="arrow_icon"></div>
+        </div>
+        <div class="drop_dwn">
+          <a href="{{prezentare}}" class="link_meniu_mobil">Prezentare generala</a>
+          <a href="{{organizare}}" class="link_meniu_mobil">Organigrama</a>
+          <a href="{{membri}}" class="link_meniu_mobil">Membrii</a>
+        </div>
+      </li>
+      <li class="lista_item">
+        <div class="div-block-35">
+          <a href="#" class="link_meniu_mobil">Educație</a>
+          <div data-w-id="33c7fab6-3707-85af-1d4c-a89b21f54de4" class="icondwn2"><img src="{% static 'images/right-arrow-num-list.svg' %}" loading="lazy" width="10" alt="arrow_icon"></div>
+        </div>
+        <div class="drpdwn2">
+          <a href="{{specializari}}" class="link_meniu_mobil">Programe de studii</a>
+          <a href="{{burse}}" class="link_meniu_mobil">Costuri &amp; Scholarship</a>
+        </div>
+      </li>
+      <li class="lista_item">
+        <a href="#" class="link_meniu_mobil">Cercetare</a>
+      </li>
+    </ul>
+    <div class="div-block-36">
+      <div class="div-block-37">
+        <a href="{{home}}" aria-current="page" class="link-19 w--current">Anunțuri</a>
+        <a href="{{contact}}" class="link-19">Contact</a>
+      </div>
+    </div>
+    <!-- <div class="div-block-38">
+      <a href="#" class="link-block-4 w-inline-block">
+        <div class="text-block-48">Înregistrează-te</div>
+      </a>
+      <div class="div-block-39">
+        <a href="#" class="link-21">Login</a><img src="{% static 'images/right-arrow-num-list.svg' %}" loading="lazy" alt="arrow_icon">
+      </div>
+    </div> -->
+</div>
+
+<div class="cookie_container">
+  <div class="full w-clearfix">
+    <a data-w-id="4ab2f086-b7e2-c5d7-c701-3dde7916d358" href="#" class="button w-button">Ok. Go it.</a>
+    <div class="div-block-3"><img src="{% static 'images/infoo.svg' %}" loading="lazy" width="20" alt="info" class="image-3">
+      <div class="text-block-17">Info Cookie</div>
+    </div>
+    <p class="paragraph">Acest site folosește cookie-uri pentru a vă oferi o experiență de navigare mai bună. Aflați mai multe despre <a href="#" target="_blank" class="link-5"><span class="text-span">cum folosim cookie-urile și despre cum vă puteți modifica setările.</span></a>
+    </p>
+  </div>
+</div>
